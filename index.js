@@ -126,11 +126,12 @@ function moveDodgerRight() {
    function move(){
      if (left + width < GAME_WIDTH ){
        DODGER.style.left = `${left + 4}px`;
-       window.requestAnimationFrame(move);
-       return
+       //window.requestAnimationFrame(move);
+      // return
      }
    }
-   window.requestAnimationFrame(move);
+   //window.requestAnimationFrame(move);
+   move()
 }
 
 /**

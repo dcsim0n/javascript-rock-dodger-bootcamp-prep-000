@@ -103,7 +103,7 @@ function moveDodger(e) {
    var left = DODGER.style.left;
    left = positionToInteger(left);
    
-   e.stopPropogation();
+   e.stopPropagation();
    e.preventDefault();
    if(e.which === LEFT_ARROW){ moveDodgerLeft(left); }
    else if(e.which === RIGHT_ARROW){ moveDodgerRight(left); }

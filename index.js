@@ -93,11 +93,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
-   var left = DODGER.style.left;
-   left = positionToInteger(left);
-   
-   
-    if(e.which === LEFT_ARROW){ 
+   if(e.which === LEFT_ARROW){ 
       e.stopPropagation();
       e.preventDefault();
       moveDodgerLeft(); 
@@ -119,6 +115,7 @@ function moveDodgerLeft() {
     }
   }
   window.requestAnimationFrame(move);
+  return
 }
 
 function moveDodgerRight() {

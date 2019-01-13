@@ -97,8 +97,8 @@ function moveDodger(e) {
    
    e.stopPropagation();
    e.preventDefault();
-   if(e.which === LEFT_ARROW){ moveDodgerLeft(left); }
-   else if(e.which === RIGHT_ARROW){ moveDodgerRight(left); }
+   if(e.which === LEFT_ARROW){ moveDodgerLeft(); }
+   else if(e.which === RIGHT_ARROW){ moveDodgerRight(); }
 }
 
 function moveDodgerLeft() {
@@ -112,8 +112,10 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(move);
 }
 
-function moveDodgerRight(left) {
-   var width = 40;
+function moveDodgerRight() {
+   let width = 40;
+   let left = positionToInteger(DODGER.style.left);
+
    function move(){
      DODGER.style.left = `${left + 4}px`;
      if (left + width < GAME_WIDTH ){

@@ -61,24 +61,14 @@ function createRock(x) {
     top = rock.style.top;
     top = positionToInteger(top);
     rock.style.top = `${top + 2}px`;
-    /**
-     * But if the rock *has* reached the bottom of the GAME,
-     * we should remove the rock from the DOM
-     */
-     if (top > (GAME_HEIGHT)){
+    if (top > (GAME_HEIGHT)){
       rock.remove();
-     }
-     window.requestAnimationFrame(moveRock);
+    }
+    window.requestAnimationFrame(moveRock);
     
   }
   window.requestAnimationFrame(moveRock);
-  // We should kick of the animation of the rock around here
-
-  // Add the rock to ROCKS so that we can remove all rocks
-  // when there's a collision
   ROCKS.push(rock)
-
-  // Finally, return the rock element you've created
   return rock
 }
 

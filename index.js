@@ -102,7 +102,7 @@ function endGame() {
 function moveDodger(e) {
    var left = DODGER.style.left;
    left = positionToInteger(left);
-   e.
+   e.preventDefault();
    if(e.which === LEFT_ARROW){ moveDodgerLeft(left); }
    if(e.which === RIGHT_ARROW){ moveDodgerRight(left); }
 }

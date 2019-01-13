@@ -110,12 +110,13 @@ function moveDodgerLeft() {
   function move() {
     if (left > 0){
       DODGER.style.left = `${left - 4}px`;
-      window.requestAnimationFrame(move);
-      return
+      //window.requestAnimationFrame(move);
+      //return
     }
   }
-  window.requestAnimationFrame(move);
-  return
+  //window.requestAnimationFrame(move);
+  //return
+  move();
 }
 
 function moveDodgerRight() {

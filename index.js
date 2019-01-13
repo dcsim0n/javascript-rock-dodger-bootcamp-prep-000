@@ -101,7 +101,8 @@ function moveDodger(e) {
    else if(e.which === RIGHT_ARROW){ moveDodgerRight(left); }
 }
 
-function moveDodgerLeft(left) {
+function moveDodgerLeft() {
+  let left = positionToInteger(DODGER.style.left);
   function move() {
     DODGER.style.left = `${left - 4}px`
     if (left > 0){

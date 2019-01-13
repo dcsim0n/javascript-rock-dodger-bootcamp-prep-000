@@ -32,12 +32,12 @@ function checkCollision(rock) {
 
     const rockRightEdge = rockLeftEdge + 20;
 
-    if (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerLeftEdge){
+    if (rockLeftEdge <= dodgerRightEdge && rockLeftEdge >= dodgerLeftEdge){
       return true;
     }
-    if(rockRightEdge => dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) {
+    if(rockRightEdge <= dodgerRightEdge && rockRightEdge >= dodgerLeftEdge) {
       //console.log((rockLeftEdge, dodgerLeftEdge));
-      //return true
+      return true
     }
   }
   return false;
